@@ -1,0 +1,26 @@
+[workspace]
+name = "jax-ai-stack"
+version = "0.1.0"
+authors = ["Payman Tohidifar <payman.tohidifar@gmail.com>"]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tasks]
+lab = "jupyter lab"
+
+[dependencies]
+python = "3.11.*"
+numpy = ">=2.4.4"     # JAX 0.10.x requires NumPy 2.x+
+scipy = ">=1.17.1"    # Necessary for new JAX/NumPy C-API compatibility
+jupyterlab = ">=4.3.5"
+pixi-kernel = "*"
+matplotlib = ">=3.10.9,<4"
+
+[pypi-dependencies]
+jax = ">=0.10.0"      # The April 2026 stable release
+jaxlib = ">=0.10.0"   # Critical match for the JAX version
+flax = ">=0.12.7"     # April 2026 release with NNX API as standard
+optax = ">=0.2.8"     # Stable 2026 gradient library
+# Optional: for managing datasets in JAX pipelines
+chex = "*"            
+orbax-checkpoint = "*"

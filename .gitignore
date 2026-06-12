@@ -1,0 +1,7 @@
+# PIXI
+.pixi/
+!.pixi/config.toml
+
+# MISC
+materials/
+
